@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Product, Purchase
 import pandas as pd
+from .utils import get_simple_plot
 
 # Create your views here.
 
@@ -27,6 +28,7 @@ def chart_select_view(request):
                     df = df[(df['date']>date_from) & (df['date']<date_to)]
                     df2 = df.groupby('date', as_index=False)['total_price'].agg('sum')
                 # function to get a graph
+                #get_simple_plot(chart_type, x=, y=, data=, df=)
             else:
                 error_message = 'Please choose a chart type to continue'
 
