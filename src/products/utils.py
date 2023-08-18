@@ -41,7 +41,7 @@ def get_simple_plot(chart_type, *args, **kwargs):
     else:
         title = "title"
         plt.title(title)
-        sns.countplot('name', data=data)
+        sns.countplot(x='name', data=data)
     plt.tight_layout()
 
     graph = get_image()
