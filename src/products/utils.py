@@ -21,7 +21,7 @@ def get_image():
 
     return graph
 
-
+# Criar grafico de acordo com a opção
 def get_simple_plot(chart_type, *args, **kwargs):
     # https://matplotlib.org/stable/users/explain/backends.html
     plt.switch_backend('AGG')
